@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Nivo Roofing & Construction</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="formulario.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="index.js" defer></script>
+    <script src="validaciones.js" defer></script>
+</head>
+<body>
+
+    <form class="needs-validation" novalidate action="https://formsubmit.co/dg753513@gmail.com" method="POST">
+
+        <div class="form-language-bar">
+            <button type="button" id="btn-es">Español</button>
+            <button type="button" id="btn-en">English</button>
+        </div>
+
+        <div class="form-header">
+            <img class="form-logo" src="../index/imagenes/logo.jpg" alt="Logo de la empresa">
+            <div class="form-tag" id="form-tag">Nivo Roofing & Construction</div>
+            <h2 id="form-title">Solicita tu cotización</h2>
+            <p class="form-subtitle" id="form-subtitle">
+                Cuéntanos sobre tu proyecto y nos pondremos en contacto contigo para brindarte una atención profesional, clara y confiable.
+            </p>
+        </div>
+
+        <div class="form-company-info">
+            <div class="info-box">
+                <span id="info-location-label">Ubicación</span>
+                <p id="info-location-value">El Paso, Texas</p>
+            </div>
+
+            <div class="info-box">
+                <span id="info-hours-label">Atención</span>
+                <p id="info-hours-value">Lunes a sábado</p>
+            </div>
+
+            <div class="info-box">
+                <span id="info-whatsapp-label">WhatsApp</span>
+                <p>+52 656 175 3976</p>
+            </div>
+
+            <div class="info-box">
+                <span id="info-email-label">Email</span>
+                <p>nivoquiroga@gmail.com</p>
+            </div>
+        </div>
+
+        <div class="mi-input-group">
+            <label for="name" id="label-name">Nombre completo</label>
+            <input type="text" name="name" id="name" placeholder="Escribe tu nombre completo" required>
+            <div class="invalid-feedback" id="error-name">Por favor escribe tu nombre.</div>
+
+            <label for="phone" id="label-phone">Número de teléfono</label>
+            <input type="text" name="phone" id="phone" placeholder="Escribe tu número de contacto" required>
+            <div class="invalid-feedback" id="error-phone">Por favor escribe tu número.</div>
+
+            <label for="email" id="label-email">Correo electrónico</label>
+            <input type="email" name="email" id="email" placeholder="Escribe tu correo electrónico" required>
+            <div class="invalid-feedback" id="error-email">Por favor escribe un correo válido.</div>
+
+            <label for="message" id="label-message">Cuéntanos sobre tu proyecto</label>
+            <textarea name="message" id="message" placeholder="Ejemplo: necesito remodelación de baño, instalación de piso, roofing, carpintería o una ampliación..." rows="5" required></textarea>
+            <div class="invalid-feedback" id="error-message">Por favor escribe un mensaje.</div>
+
+            <div class="form-txt">
+                <a href="#" id="privacy-link">Política de privacidad</a>
+                <a href="#" id="terms-link">Términos y condiciones</a>
+            </div>
+
+            <input class="mi-btn" type="submit" id="submit-button" value="Enviar solicitud">
+
+            <p class="form-note" id="form-note">
+                Tu información será utilizada únicamente para contactarte respecto a tu proyecto.
+            </p>
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/formulario/gracias.html">
+            <input type="hidden" name="_captcha" value="false">
+        </div>
+
+    </form>
+
+</body>
+</html>
