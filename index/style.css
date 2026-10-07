@@ -1,0 +1,418 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+.topbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 8%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo{
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.nav-menu{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-menu a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover{
+  color: #c28b39;
+}
+
+.lang-buttons{
+  display: flex;
+  gap: 10px;
+}
+
+.lang-buttons button{
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: white;
+  color: #222;
+  transition: 0.3s;
+}
+
+.lang-buttons button:hover{
+  background-color: #d9d9d9;
+}
+
+.hero{
+  min-height: 100vh;
+  background: linear-gradient(rgba(162, 0, 255, 0.65), rgba(0,0,0,0.65)),
+  url('images/header.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 140px 8% 90px;
+}
+
+.hero-overlay{
+  color: white;
+  max-width: 900px;
+}
+
+.hero h1{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.hero p{
+  max-width: 850px;
+  margin: 0 auto 25px;
+  font-size: 20px;
+}
+
+.hero a{
+  display: inline-block;
+  background-color: #c28b39;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero a:hover{
+  background-color: #a8742f;
+}
+
+section{
+  padding: 80px 8%;
+  scroll-margin-top: 110px;
+}
+
+.section-title{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #b481f3;
+}
+
+.about{
+  background-color: white;
+}
+
+.about-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card{
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  margin-bottom: 15px;
+  color: #b2792e;
+  font-size: 24px;
+}
+
+.mission-vision{
+  background-color: #efefef;
+}
+
+.gallery{
+  background-color: white;
+}
+
+.gallery-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item{
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  background-color: #ddd;
+}
+
+.gallery-item img{
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s;
+}
+
+.gallery-item img:hover{
+  transform: scale(1.05);
+}
+
+.contact{
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+}
+
+.contact p{
+  max-width: 800px;
+  margin: auto;
+  font-size: 20px;
+}
+
+footer{
+  background-color: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 15px;
+}
+
+@media (max-width: 992px){
+  .topbar{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-menu{
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px){
+  .hero{
+    padding: 170px 6% 80px;
+  }
+
+  .hero h1{
+    font-size: 36px;
+  }
+
+  .hero p{
+    font-size: 18px;
+  }
+
+  .section-title{
+    font-size: 30px;
+  }
+
+  .logo{
+    font-size: 22px;
+  }
+
+  .nav-menu{
+    gap: 12px;
+  }
+
+  .nav-menu a{
+    font-size: 14px;
+  }
+
+  .lang-buttons button{
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .gallery-item img{
+    height: 220px;
+  }
+}
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.logo img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+  padding: 4px;
+}
+
+.contact{
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+}
+
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-card{
+  background-color: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.contact-card h3{
+  color: #cfa8ff;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.contact-card p{
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.contact-card a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact-card a:hover{
+  color: #cfa8ff;
+}
+.gallery-subtitle{
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 18px;
+  color: #555;
+}
+
+.gallery-button-container{
+  text-align: center;
+  margin-top: 35px;
+}
+
+.gallery-button{
+  display: inline-block;
+  background-color: #c28b39;
+  color: white;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.gallery-button:hover{
+  background-color: #a8742f;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.logo img{
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 10px;
+  background-color: white;
+  padding: 4px;
+}
+
+.contact-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.contact-card{
+  background-color: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.contact-card h3{
+  color: #cfa8ff;
+  margin-bottom: 12px;
+  font-size: 22px;
+}
+
+.contact-card p{
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.contact-card a{
+  color: white;
+  text-decoration: none;
+}
+
+.contact-card a:hover{
+  color: #cfa8ff;
+}
+
+
+@media (max-width: 480px){
+  .hero h1{
+    font-size: 30px;
+  }
+
+  .hero p{
+    font-size: 16px;
+  }
+
+  .card h3{
+    font-size: 21px;
+  }
+
+  .contact p{
+    font-size: 17px;
+  }
+}
